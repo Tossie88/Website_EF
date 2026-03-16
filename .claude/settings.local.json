@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser)",
+      "Bash(powershell.exe -Command \"Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Force\")",
+      "Bash(powershell.exe -Command \"npx skills add https://github.com/anthropics/skills --skill frontend-design\")",
+      "Bash(powershell.exe -Command \"npx skills add https://github.com/anthropics/skills --skill frontend-design --yes --global\")",
+      "Bash(powershell.exe -Command \"npx skills add https://github.com/nextlevelbuilder/ui-ux-pro-max-skill --yes --global\")",
+      "Bash(powershell.exe -Command \"cd ''C:\\\\Users\\\\Eis Freude GmbH\\\\VSCode\\\\Website''; npx skills add https://github.com/nextlevelbuilder/ui-ux-pro-max-skill --yes\")",
+      "Bash(gh auth:*)"
+    ]
+  }
+}
