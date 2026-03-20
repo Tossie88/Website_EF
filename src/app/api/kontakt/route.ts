@@ -1,11 +1,21 @@
 import { NextResponse } from 'next/server'
+import nodemailer from 'nodemailer'
+
+const transporter = nodemailer.createTransport({
+  host: process.env.SMTP_HOST,
+  port: Number(process.env.SMTP_PORT),
+  secure: true,
+  auth: {
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS,
+  },
+})
 
 export async function POST(request: Request) {
   try {
     const body = await request.json()
     const { company, name, email, phone, message, interests } = body
 
-    // Validate required fields
     if (!company || !name || !email) {
       return NextResponse.json(
         { error: 'Pflichtfelder fehlen' },
@@ -13,28 +23,26 @@ export async function POST(request: Request) {
       )
     }
 
-    // Log the inquiry (in production, send email here)
-    console.log('Neue Anfrage:', {
-      company,
-      name,
-      email,
-      phone: phone || 'nicht angegeben',
-      interests: interests?.join(', ') || 'keine',
-      message: message || 'keine Nachricht',
-      timestamp: new Date().toISOString(),
+    await transporter.sendMail({
+      from: `"Eis Freude Website" <${process.env.SMTP_USER}>`,
+      to: process.env.SMTP_TO,
+      replyTo: email,
+      subject: `Neue Anfrage von ${company} – ${name}`,
+      text: [
+        `Firma: ${company}`,
+        `Name: ${name}`,
+        `E-Mail: ${email}`,
+        `Telefon: ${phone || 'nicht angegeben'}`,
+        `Interesse an: ${interests?.join(', ') || 'keine Auswahl'}`,
+        ``,
+        `Nachricht:`,
+        message || '(keine Nachricht)',
+      ].join('\n'),
     })
 
-    // In production: integrate email service (nodemailer, Resend, etc.)
-    // Example with Resend:
-    // await resend.emails.send({
-    //   from: 'website@eisfreude.de',
-    //   to: 'info@eisfreude.de',
-    //   subject: `Neue Anfrage von ${company} – ${name}`,
-    //   text: `...`,
-    // })
-
     return NextResponse.json({ success: true }, { status: 200 })
-  } catch {
+  } catch (err) {
+    console.error('E-Mail-Fehler:', err)
     return NextResponse.json(
       { error: 'Interner Serverfehler' },
       { status: 500 }
