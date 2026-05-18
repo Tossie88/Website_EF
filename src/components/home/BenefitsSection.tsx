@@ -37,7 +37,7 @@ export function BenefitsSection() {
             Ihr zuverlässiger <em className="text-gold not-italic italic">Eispartner</em>
           </h2>
           <p className="text-cream/55 font-sans text-center max-w-xl mx-auto text-base leading-relaxed mb-16">
-            Wir wissen, was Gastronomen brauchen: Konstanz, Qualität und Verlässlichkeit — bei jedem Becher.
+            Wir wissen, was Gastronomen brauchen: Konstanz, Qualität und Verlässlichkeit — spührbar bei jeder Kugel.
           </p>
         </ScrollReveal>
 
