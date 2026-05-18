@@ -71,7 +71,7 @@ export default function UeberUnsPage() {
                   zuverlässig reproduziert werden kann.
                 </p>
                 <p className="font-sans text-cream/60 text-sm leading-relaxed">
-                  Mit unserem Sortiment von über 40 Eissorten — darunter die exklusive
+                  Mit unserem Sortiment von über 30 Eissorten — darunter die exklusive
                   Favorelli-Linie mit authentischen Gelato-Kreationen nach italienischen
                   Vorbildern — decken wir die Bedürfnisse moderner Gastronomie-Betriebe ab.
                 </p>
