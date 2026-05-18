@@ -16,7 +16,7 @@ const BENEFITS = [
   {
     icon: Star,
     title: 'Konsequente Qualität',
-    text: 'Natürliche Zutaten, keine künstlichen Aromen. Jede Charge geprüft — damit Ihre Gäste bei jedem Besuch dasselbe exzellente Erlebnis haben.',
+    text: 'Die Besten Zutaten auf dem Markt. Jede Charge durch unsere Qualitätssicherung geprüft — damit Ihre Gäste bei jedem Besuch dasselbe exzellente Erlebnis haben.',
   },
   {
     icon: Truck,
