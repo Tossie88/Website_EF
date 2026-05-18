@@ -10,7 +10,7 @@ interface CategoryFilterProps {
   onChange: (cat: FilterCategory) => void
 }
 
-const CATEGORIES = ['alle', 'milcheis', 'fruchteis', 'gelato', 'sonderprodukte'] as FilterCategory[]
+const CATEGORIES = ['alle', 'milcheis', 'fruchteis'] as FilterCategory[]
 
 export function CategoryFilter({ active, onChange }: CategoryFilterProps) {
   return (
