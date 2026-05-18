@@ -1,0 +1,32 @@
+name: Deploy to Hostinger
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd /root/Website_EF
+            git pull origin master
+            docker build -t eisfreude-website .
+            docker stop eisfreude-website || true
+            docker rm eisfreude-website || true
+            docker run -d \
+              -p 3000:3000 \
+              --name eisfreude-website \
+              --restart unless-stopped \
+              -e SMTP_HOST="${{ secrets.SMTP_HOST }}" \
+              -e SMTP_USER="${{ secrets.SMTP_USER }}" \
+              -e SMTP_PASS="${{ secrets.SMTP_PASS }}" \
+              eisfreude-website
