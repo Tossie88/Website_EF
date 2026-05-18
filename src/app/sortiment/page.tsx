@@ -33,7 +33,7 @@ export default function SortimentPage() {
             Unser <em className="italic text-gold">Sortiment</em>
           </h1>
           <p className="font-sans text-cream/55 text-base max-w-xl mx-auto leading-relaxed">
-            Über 40 Eissorten in der 5.600-ml-Eiskanne — für Eiscafés, Restaurants
+            Über 30 Eissorten in der 5.600-ml-Eiskanne — für Eiscafés, Restaurants
             und Hotels. Wählen Sie Ihre Kategorie.
           </p>
         </div>
