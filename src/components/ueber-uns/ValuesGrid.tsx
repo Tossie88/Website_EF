@@ -10,7 +10,7 @@ const VALUES = [
   {
     icon: Shield,
     title: 'Qualität',
-    text: 'Jede Charge wird nach strengen internen Qualitätsstandards geprüft. Wir setzen ausschließlich natürliche Zutaten ein — ohne künstliche Aromen oder Farbstoffe.',
+    text: 'Jede Charge wird nach strengen internen Qualitätsstandards geprüft. Wir setzen auf die besten Rohstoffe von ausgewählten Lieferanten.',
   },
   {
     icon: Heart,
