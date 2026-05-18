@@ -10,8 +10,8 @@ import { motion } from 'framer-motion'
 const BENEFITS = [
   {
     icon: Package,
-    title: 'Professionelle Eiskanne',
-    text: 'Über 40 Eissorten in der 5.600-ml-Kanne — kalkulierbar im Einkauf, flexibel im Einsatz. Für Eiscafés, Restaurants und Hotels.',
+    title: 'Professionelles Gebinde',
+    text: 'Über 30 Eissorten in der 5.600-ml-Schale — kalkulierbar im Einkauf, flexibel im Einsatz. Für Eiscafés, Restaurants und Hotels.',
   },
   {
     icon: Star,
