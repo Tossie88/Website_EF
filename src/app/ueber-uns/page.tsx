@@ -33,7 +33,7 @@ export default function UeberUnsPage() {
           </h1>
           <p className="font-sans text-cream/55 text-base max-w-xl leading-relaxed">
             Wir sind ein spezialisierter Hersteller und Lieferant von Premium-Speiseeis
-            in der professionellen 5.600-ml-Kanne — für Eiscafés, Restaurants und Hotels, die ihren Gästen
+            in der professionellen 5.600-ml-Schale — für Eiscafés, Restaurants und Hotels, die ihren Gästen
             Außergewöhnliches bieten wollen.
           </p>
         </div>
