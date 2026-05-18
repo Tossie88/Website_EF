@@ -109,9 +109,8 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 1.1 }}
         >
-          Die Eis Freude GmbH produziert und vertreibt hochwertiges Speiseeis in der
-          professionellen 5.600-ml-Schale — für Eiscafés und die Gastronomie, mit der
-          Präzision eines Herstellers und der Leidenschaft eines Eismachers.
+          Wir produzieren Eis, das begeistert und liefern es, wie die Gastronomie es braucht.
+          Mit der Präzision eines Herstellers und der Leidenschaft eines Eismachers.
         </motion.p>
 
         <motion.div
